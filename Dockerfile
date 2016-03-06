@@ -8,5 +8,6 @@ RUN apt-get install -yqq autoconf
 RUN apt-get install -yqq libsqlite3-dev
 RUN apt-get install -yqq libavcodec-dev
 RUN apt-get install -yqq libavformat-dev
+RUN apt-get install -yqq libjpeg-dev
 
 CMD bash
