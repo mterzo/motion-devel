@@ -1,17 +1,25 @@
 FROM ubuntu:14.04
-RUN apt-get -y update && apt-get install -y rake
-RUN apt-get -y install ruby1.9.1-dev
-RUN apt-get -y install build-essential
-RUN apt-get install -yqq git
-RUN apt-get install -yqq build-essential
-RUN apt-get install -yqq autoconf
-RUN apt-get install -yqq libsqlite3-dev
-RUN apt-get install -yqq libavcodec-dev
-RUN apt-get install -yqq libavformat-dev
-RUN apt-get install -yqq libjpeg-dev
-RUN apt-get install -yqq pkg-config
-RUN apt-get install -y git-buildpackage
-RUN apt-get install -y dh-autoreconf zlib1g-dev libpq-dev \
-    libmysqlclient-dev libv4l-dev libhiredis-dev libswscale-dev
+MAINTAINER Mike Terzo <mike@terzo.org>
+
+RUN apt-get -y update && apt-get install -y \
+    autoconf \
+    build-essential \
+    dh-autoreconf \
+    git
+    git-buildpackage \
+    libavcodec-dev \
+    libavformat-dev \
+    libhiredis-dev
+    libjpeg-dev \
+    libmysqlclient-dev \
+    libpq-dev \
+    libsqlite3-dev \
+    libswscale-dev
+    libv4l-dev \
+    pkg-config \
+    rake \
+    ruby1.9.1-dev \
+    zlib1g-dev \
+&& rm -rf /var/lib/apt/lists/*
 
 CMD bash
