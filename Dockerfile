@@ -5,16 +5,16 @@ RUN apt-get -y update && apt-get install -y \
     autoconf \
     build-essential \
     dh-autoreconf \
-    git
+    git \
     git-buildpackage \
     libavcodec-dev \
     libavformat-dev \
-    libhiredis-dev
+    libhiredis-dev \
     libjpeg-dev \
     libmysqlclient-dev \
     libpq-dev \
     libsqlite3-dev \
-    libswscale-dev
+    libswscale-dev \
     libv4l-dev \
     pkg-config \
     rake \
