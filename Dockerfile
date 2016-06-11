@@ -10,5 +10,8 @@ RUN apt-get install -yqq libavcodec-dev
 RUN apt-get install -yqq libavformat-dev
 RUN apt-get install -yqq libjpeg-dev
 RUN apt-get install -yqq pkg-config
+RUN apt-get install -y git-buildpackage
+RUN apt-get install -y dh-autoreconf zlib1g-dev libpq-dev \
+    libmysqlclient-dev libv4l-dev libhiredis-dev libswscale-dev
 
 CMD bash
