@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER Mike Terzo <mike@terzo.org>
 
+# Here's a comment for chris.
+
 RUN apt-get -y update && apt-get install -y \
     autoconf \
     build-essential \
