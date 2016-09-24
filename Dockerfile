@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Mike Terzo <mike@terzo.org>
 
 # Here's a comment for chris.
@@ -6,22 +6,20 @@ MAINTAINER Mike Terzo <mike@terzo.org>
 RUN apt-get -y update && apt-get install -y \
     autoconf \
     build-essential \
-    dh-autoreconf \
+    autoconf \
+    automake \
     git \
-    git-buildpackage \
-    libavcodec-dev \
+    pkg-config \
+    libtool \
+    libjpeg8-dev \
+    libzip-dev \
     libavformat-dev \
-    libhiredis-dev \
-    libjpeg-dev \
+    libavcodec-dev \
+    libswscale-dev \
+    libv4l-dev \
     libmysqlclient-dev \
     libpq-dev \
     libsqlite3-dev \
-    libswscale-dev \
-    libv4l-dev \
-    pkg-config \
-    rake \
-    ruby1.9.1-dev \
-    zlib1g-dev \
 && rm -rf /var/lib/apt/lists/*
 
 CMD bash
